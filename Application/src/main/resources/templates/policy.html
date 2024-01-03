@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KIRA PASS</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+     <style>
+    a:link,
+    a:visited {
+        background-color: white;
+        color: black;
+        border: 2px solid green;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    a:hover,
+    a:active {
+        background-color: green;
+        color: white;
+    }
+        body{     
+    background-image: url("../images/policies.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+		}
+    
+    </style>
+</head>
+<body class="home">
+	<header>
+	<div align="left">
+			<a href="/">Home</a>
+		</div>
+		<h1 class="kira">KIRA Policy Administration System</h1>
+	</header>
+<div align="center">
+<h1>Policy Details</h1>
+<table style="border: 1px solid black;border-collapse: collapse;">
+  
+  <tr><td><strong>Consumer Id:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.consumerid}"></span>
+</td>
+  </tr>
+  <tr><td><strong>Policy Id:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.policyid}"></span></td>
+  </tr>
+  <tr><td><strong>Property Type:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.property_type}"></span></td>
+  </tr>
+  <tr><td><strong>Consumer Type:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.consumer_type}"></span></td>
+  </tr>
+  <tr><td><strong>Assured Sum:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.assured_sum}"></span></td>
+  </tr>
+  <tr><td><strong>Tenure:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.tenure}"></span></td>
+  </tr>
+  <tr><td><strong>Business Value:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.business_value}"></span></td>
+  </tr>
+  <tr><td><strong>Property Value:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.property_value}"></span></td>
+  </tr>
+  <tr><td><strong>Base Location:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.base_location}"></span></td>
+  </tr>
+  <tr><td><strong>Type:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.type}"></span></td>
+  </tr>
+   <tr><td><strong>Business Id:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.businessid}"></span></td>
+  </tr>
+  <tr><td><strong>Payment Details:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.paymentdetails}"></span></td>
+  </tr>
+  <tr><td><strong>Acceptance Status:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.acceptancestatus}"></span></td>
+  </tr>
+  <tr><td><strong>Policy Status:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.policystatus}"></span></td>
+  </tr>
+  <tr><td><strong>Effective Date:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.effectivedate}"></span></td>
+  </tr>
+  <tr><td><strong>Covered Sum:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.covered_sum}"></span></td>
+  </tr>
+  <tr><td><strong>Duration:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.duration}"></span></td>
+  </tr>
+  <tr><td><strong>Accepted Quote:</strong></td>
+    <td>
+<span th:text="${policyDetailsResponse.acceptedquote}"></span></td>
+  </tr>
+ 
+</table>	
+</div>
+
+<script th:src="@{/webjars/jquery/3.5.1/jquery.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.js}"></script>
+</body>
+</html>

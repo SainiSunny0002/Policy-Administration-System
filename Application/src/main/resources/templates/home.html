@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  link rel="stylesheet" href="style.css"-->
+    
+    <style>
+    
+    * {
+    box-sizing: border-box;
+   
+
+}
+
+body{     
+    background-image: url("images/img.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.box {
+    margin-top: 9%;
+}
+
+h1 {
+    text-align: center;
+
+}
+
+#log{
+    padding: 10px;
+    border-radius: 15px;
+    background-color: green;
+    box-shadow: 10px;
+    color: white;
+}
+
+a:link,
+a:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: green;
+    color: white;
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 7%;
+
+}
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+    
+    </style>
+</head>
+
+<body>
+    <header>
+		<div align="right">
+			<form th:action="@{/logout}" method="post">
+				<button type="submit" id="log">logout</button>
+			</form>
+		</div>
+		
+	</header>
+    <div class="box">
+        <h1 class="kira">KIRA Policy Administration System</h1>
+        <div id="buttons">
+            <div class="dropdown">
+                <button class="dropbtn">Consumer Business</button>
+                <div class="dropdown-content">
+                  <a href="/conbusiness/create.html">Create Consumer Business</a>
+                  <a href="/conbusiness/view.html">View Consumer Business</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Business Property</button>
+                <div class="dropdown-content">
+                  <a href="/busprop/create.html">Create Business Property</a>
+                  <a href="/busprop/view.html">View Consumer Property</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Quotes</button>
+                <div class="dropdown-content">
+                  <a href="/quotes/view.html">View Quotes</a>
+                </div>
+              </div>
+
+              <div class="dropdown">
+                <button class="dropbtn">Policy</button>
+                <div class="dropdown-content">
+                  <a href="/policy/create.html">Create Policy</a>
+                  <a href="/policy/issue.html">Issue Policy</a>
+                  <a href="/policy/view.html">View Policy</a>
+                </div>
+              </div>
+            
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

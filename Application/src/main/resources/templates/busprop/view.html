@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Kira PAS-HOME</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<style>
+    a:link,
+    a:visited {
+        background-color: white;
+        color: black;
+        border: 2px solid green;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    
+    a:hover,
+    a:active {
+        background-color: green;
+        color: white;
+    }
+    body{     
+    background-image: url("../images/property.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+		}
+    
+    </style>
+</head>
+<body class="home">
+    <header>
+		<div align="left">
+			<a href="/">Home</a>
+		</div>
+		
+	</header>
+<div align="center">
+		
+		<h2>View Consumer Property</h2>
+		<form th:action="@{/viewConsumerProperty}" method="get">
+			<table>
+				<tr>
+					<td><strong>Consumer ID:</strong></td>
+					<td><input name="consumerid" id="consumerid" type="number"
+						value="" min="0" max="999999" required="required" /></td>
+				</tr>
+				<tr>
+					<td><strong>Property ID:</strong></td>
+					<td><input name="propertyid" id="propertyid" type="number"
+						value="" min="0" max="999999" required="required"/></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit"
+						value="View Consumer Property" /></td>
+				</tr>
+			</table>
+		</form>
+		
+</div>
+
+	<script th:src="@{/webjars/jquery/3.5.1/jquery.js}"></script>
+	<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.js}"></script>
+</body>
+</html>

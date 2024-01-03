@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Kira PAS-HOME</title>
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.css}">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="home">
+	<header>
+		<div align="right">
+			<form th:action="@{/logout}" method="post">
+				<button type="submit">logout</button>
+			</form>
+		</div>
+	
+	</header>
+<div align="center">
+		
+		<h2>View Quotes</h2>
+		<form th:action="@{/getQuotes}" method="get">
+			<table>
+				<tr>
+					<td><strong>Business Value:</strong></td>
+					<td><input name="businessValue" id="businessValue"
+						type="number" value="" /></td>
+				</tr>
+				<tr>
+					<td><strong>Property Value:</strong></td>
+					<td><input name="propertyValue" id="propertyValue"
+						type="number" value="" /></td>
+				</tr>
+				<tr>
+					<td><strong>Property Type:</strong></td>
+					<td><input name="propertyType" id="propertyType" type="text"
+						value="" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="View Quotes" /></td>
+				</tr>
+
+			</table>
+		</form>
+		<table>
+			<tr>
+				<td><h6><strong>Quotes:</strong></h6></td>
+				<td><h6>
+						<span th:text="${quotes}"></span>
+					</h6></td>
+			</tr>
+		</table>
+		<br> <br>
+		
+	</div>
+
+	<script th:src="@{/webjars/jquery/3.5.1/jquery.js}"></script>
+	<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.js}"></script>
+</body>
+</html>
