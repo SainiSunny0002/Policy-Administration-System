@@ -1,0 +1,21 @@
+version: 0.2
+phases: 
+  install: 
+   commands: 
+     - echo executing install phase
+  pre_build: 
+   commands: 
+     - echo Pre-build phase executing
+  build: 
+   commands: 
+     - echo Build phase started...
+     - cd ConsumerMicroservice
+  post_build: 
+   commands: 
+     - echo Post-build phase started...
+     - mvn install
+     
+artifacts: 
+  files: 
+     - ConsumerMicroservice/target/port5000.jar
+  discard-paths: yes      
